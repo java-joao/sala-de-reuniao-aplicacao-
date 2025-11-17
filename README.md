@@ -5,4 +5,4 @@
 - Gabrielle Gomes
 - Isadora Rodrigues  
 - João Victor Demarchi
-- Thiago Tesh
+- Thiago Tesch
