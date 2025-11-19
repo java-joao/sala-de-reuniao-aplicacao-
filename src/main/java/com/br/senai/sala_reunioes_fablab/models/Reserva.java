@@ -1,4 +1,4 @@
-package com.br.senai.sala_reunioes_fablab.models;
+=package com.br.senai.sala_reunioes_fablab.models;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -35,11 +35,11 @@ public class Reserva {
 
 
     @ManyToOne
-    @JoinColumn ("responsavel_id")
+    @JoinColumn (name="responsavel_id")
     private Responsavel responsavel;
 
     @ManyToOne
-    @JoinColumn("administrador_id")
+    @JoinColumn(name="administrador_id")
     private Administrador administrador;
 
 
