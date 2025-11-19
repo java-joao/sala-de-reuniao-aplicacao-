@@ -31,8 +31,6 @@ public class Administrador{
     @Column ( name = "setor")
     private String setor;
 
-    @OnetoMany
-    private Reserva reserva;
 
 
 
