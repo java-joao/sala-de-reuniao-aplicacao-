@@ -1,5 +1,5 @@
 package com.br.senai.sala_reunioes_fablab.repositories;
 
-public class ResponsavelRepository {
+public interface ResponsavelRepository extends JpaRepository<Responsavel, Integer>{
     
 }

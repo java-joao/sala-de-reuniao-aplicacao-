@@ -31,6 +31,9 @@ public class Administrador{
     @Column ( name = "setor")
     private String setor;
 
+    @OnetoMany
+    private Reserva reserva;
+
 
 
     public Administrador (){}
@@ -38,13 +41,14 @@ public class Administrador{
 
 
     public Administrador(Integer administradorId, String nome, String senha, String regiao, String matricula,
-            String setor) {
+            String setor, Reserva reserva) {
         this.administradorId = administradorId;
         this.nome = nome;
         this.senha = senha;
         this.regiao = regiao;
         this.matricula = matricula;
         this.setor = setor;
+        this.reserva = reserva;
     }
 
 
@@ -119,6 +123,13 @@ public class Administrador{
         this.setor = setor;
     }
 
+    public Reserva setReserva (Reserva reserva) {
+        this.reseva = reserva;
+    }
+
+    public Reserva getReserva () {
+        return reserva;
+    }
     
 
     
