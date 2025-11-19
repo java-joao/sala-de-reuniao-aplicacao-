@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.senai.infoa.trabalhosenai.models.Responsavel;
 
 
-
+@Repository
 public interface ResponsavelRepository extends JpaRepository<Responsavel, Integer>{
     
 }
