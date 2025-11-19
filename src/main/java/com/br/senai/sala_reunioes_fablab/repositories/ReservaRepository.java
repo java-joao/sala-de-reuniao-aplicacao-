@@ -6,7 +6,7 @@ import com.senai.infoa.trabalhosenai.models.Reserva;
 
 
 
-
+@Repository
 public interface ReservaRepository extends JpaRepository <Reserva, Integer>{
     
     
