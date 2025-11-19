@@ -32,11 +32,11 @@ public class Reserva {
     private  String requerente;
 
 
-    @OnetoMany
+    @ManyToOne
     @JoinColumn ("responsavel_id")
     private Responsavel responsavel;
 
-    @ManytoOne
+    @ManyToOne
     @JoinColumn("administrador_id")
     private Administrador administrador;
 
