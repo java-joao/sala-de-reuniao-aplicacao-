@@ -1,25 +1,31 @@
 package com.br.senai.sala_reunioes_fablab.services;
 
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+
+import com.br.senai.sala_reunioes_fablab.repositories.ResponsavelRepository;
+import com.br.senai.sala_reunioes_fablab.models.Responsavel;
+
 @Service
 public class ResponsavelService {
-    @Autowired 
+
+    @Autowired
     private ResponsavelRepository responsavelRepository;
 
-    public void cadastrar_Responsavel(Responsavel responsavel){
-        responsavelRepository.saveAndFlush(responsavel);
-
+    public void cadastrarResponsavel(Responsavel responsavel) {
+        responsavelRepository.save(responsavel);
     }
 
-    public List<Administrador> consultar_Responsaveis(){
+    public List<Responsavel> consultarResponsaveis() {
         return responsavelRepository.findAll();
     }
 
-    public void atualizar_Responsavel (Responsavel responsavel){
-        responsavelRepository.saveAndFlush(responsavel);
+    public void atualizarResponsavel(Responsavel responsavel) {
+        responsavelRepository.save(responsavel); // save atualiza se já existir
     }
 
-    public void deletarResponsavelId (Integer id) {
+    public void deletarResponsavelId(Integer id) {
         responsavelRepository.deleteById(id);
     }
 }
-
