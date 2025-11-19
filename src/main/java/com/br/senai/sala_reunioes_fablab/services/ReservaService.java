@@ -1,26 +1,31 @@
 package com.br.senai.sala_reunioes_fablab.services;
 
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+
+import com.br.senai.sala_reunioes_fablab.repositories.ReservaRepository;
+import com.br.senai.sala_reunioes_fablab.models.Reserva;
+
 @Service
 public class ReservaService {
+
     @Autowired
     private ReservaRepository reservaRepository;
 
-    public void cadastrar_reserva(Reserva reserva){
-    reservaRepository.saveAndFlush(reserva);
-
+    public void cadastrarReserva(Reserva reserva) {
+        reservaRepository.save(reserva);
     }
 
-    public List<Reserva> consultar_reservas(){
+    public List<Reserva> consultarReservas() {
         return reservaRepository.findAll();
     }
 
-    public void atualizar_reserva (Reserva reserva){
-        reservaRepository.saveAndFlush(reserva);
+    public void atualizarReserva(Reserva reserva) {
+        reservaRepository.save(reserva); // save atualiza se houver ID
     }
 
-    public void deletarReservaId (Integer id) {
+    public void deletarReservaId(Integer id) {
         reservaRepository.deleteById(id);
     }
 }
-
-
