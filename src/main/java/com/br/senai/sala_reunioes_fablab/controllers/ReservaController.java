@@ -1,32 +1,40 @@
 package com.br.senai.sala_reunioes_fablab.controllers;
 
+import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import java.util.List;
+
+import com.br.senai.sala_reunioes_fablab.models.Reserva;
+import com.br.senai.sala_reunioes_fablab.services.ReservaService;
+
 @RestController
 @RequestMapping("/Reserva")
 public class ReservaController {
-    
-    @Autowired
-    private ReservaReository reservaRepository;
 
-    @PostMapping ("/Cadastrar")
-    public ResponseEntity<Void> CadastrarReserva (@RequestBody Reserva reserva) {
-        reservaService.cadastrar_reserva(reserva);
+    @Autowired
+    private ReservaService reservaService;
+
+    @PostMapping("/Cadastrar")
+    public ResponseEntity<Void> cadastrarReserva(@RequestBody Reserva reserva) {
+        reservaService.cadastrarReserva(reserva);
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/ListarReservas")
-    public List<Reserva> ListarReservas() {
-        return reservaService.consultar_reservas();
+    @GetMapping("/Listar")
+    public List<Reserva> listarReservas() {
+        return reservaService.consultarReservas();
     }
 
-    @PostMapping("/AtualizarReserva")
-    public ResponseEntity<Void> AtualizarReservaId(@RequestParam Integer id) {
-        reservaService.atualizar_reserva(reserva);
-        ResponseEntity.ok().build();
+    @PostMapping("/Atualizar")
+    public ResponseEntity<Void> atualizarReserva(@RequestBody Reserva reserva) {
+        reservaService.atualizarReserva(reserva);
+        return ResponseEntity.ok().build();
     }
 
-    @DeleteMapping("/DeletarReserva")
+    @DeleteMapping("/Deletar")
     public ResponseEntity<Void> deletarReservaId(@RequestParam Integer id) {
         reservaService.deletarReservaId(id);
-        ResponseEntity.ok().build();
+        return ResponseEntity.ok().build();
     }
 }
