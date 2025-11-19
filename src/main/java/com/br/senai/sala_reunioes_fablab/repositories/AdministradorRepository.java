@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.senai.infoa.trabalhosenai.models.Administrador;
 
-public interface AdministradorRepository extends JpaRepository <Administrador, Integer> {
+@Repository
+public interface AdministradorRepository extends JpaRepository<Administrador, Integer>{
     
 }
