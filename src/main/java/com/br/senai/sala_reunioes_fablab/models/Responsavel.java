@@ -8,12 +8,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="responsável")
+@Table(name="responsavel")
 public class Responsavel {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="responsável_id")
+    @Column(name="responsavel_id")
     private Integer responsavelId;
 
     @Column ( name = "nome")
@@ -22,7 +22,7 @@ public class Responsavel {
     @Column ( name = "senha")
     private  String senha;
 
-    @Column ( name = "matrícula")
+    @Column ( name = "matricula")
     private  String matricula;
     
     @Column ( name = "setor")
