@@ -31,6 +31,11 @@ public class Reserva {
     @Column ( name = "requerente")
     private  String requerente;
 
+    @ManyToOne
+    @JoinColumn (name="responsavel_id")
+    private Responsavel responsavel;
+
+
 
     public Reserva () {}
 
