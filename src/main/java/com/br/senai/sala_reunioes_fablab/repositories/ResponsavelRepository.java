@@ -4,7 +4,7 @@ package com.br.senai.sala_reunioes_fablab.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.senai.infoa.trabalhosenai.models.Responsavel;
+import com.br.senai.sala_reunioes_fablab.models.Responsavel;
 
 
 @Repository
