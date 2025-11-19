@@ -25,7 +25,7 @@ public class Reserva {
     @Column ( name = "horario")
     private  LocalTime horarioString;
 
-    @Column ( name = "razão")
+    @Column ( name = "razao")
     private  String razao;
 
     @Column ( name = "requerente")
