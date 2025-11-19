@@ -22,10 +22,10 @@ public class Administrador{
     @Column ( name = "senha")
     private String senha;
 
-    @Column ( name = "região")
+    @Column ( name = "regiao")
     private String regiao;
 
-    @Column ( name = "matrícula")
+    @Column ( name = "matricula")
     private String matricula;
 
     @Column ( name = "setor")
