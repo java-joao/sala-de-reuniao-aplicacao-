@@ -28,8 +28,7 @@ public class Responsavel {
     @Column ( name = "setor")
     private  String setor;
 
-    @ManytoOne
-    private Reserva reserva;
+  
 
 
     public Responsavel (){}
