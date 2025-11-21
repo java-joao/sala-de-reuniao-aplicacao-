@@ -1,4 +1,4 @@
-=package com.br.senai.sala_reunioes_fablab.models;
+package com.br.senai.sala_reunioes_fablab.models;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
