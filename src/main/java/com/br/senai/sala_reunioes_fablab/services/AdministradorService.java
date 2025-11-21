@@ -21,9 +21,19 @@ public class AdministradorService {
         return administradorRepository.findAll();
     }
 
-    public void atualizarAdministrador(Administrador administrador) {
-        administradorRepository.save(administrador); // save já atualiza
-    }
+    public void atualizarAdministrador(Integer id, Administrador administrador) {
+        Administrador administradorAntigo = administradorRepository.findById(id).orElseThrow(()-> new RuntimeException("Não existe esse administrador"));
+
+        if (administrador.getNome() != null) {administradorAntigo.setNome(administrador.getNome());}
+        
+        if(administrador.getMatricula() != null) {administradorAntigo.setMatricula(administrador.getMatricula());}
+
+        if(administrador.getRegiao() != null) {administradorAntigo.setRegiao(administrador.getRegiao());}
+
+        if(administrador.getSenha() != null) {administradorAntigo.setSenha(administrador.getSenha());}
+        }
+    
+
 
     public void deletarAdministradorId(Integer id) {
         administradorRepository.deleteById(id);
