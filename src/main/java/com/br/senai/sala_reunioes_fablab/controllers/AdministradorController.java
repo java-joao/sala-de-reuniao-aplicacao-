@@ -21,6 +21,19 @@ public class AdministradorController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("/login")
+    public ResponseEntity<?> login(@RequestParam String nome,@RequestParam String senha) {
+
+    Administrador administrador = administradorService.loginUsuario(nome, senha);
+
+    if (administrador == null) {
+        return ResponseEntity.status(401).body("Nome ou senha incorretos");
+    }
+
+    return ResponseEntity.ok(administrador);
+}
+    
+
     @GetMapping("/ListarAdministradores")
     public List<Administrador> listarAdministradores() {
         return administradorService.consultarAdministradores();
