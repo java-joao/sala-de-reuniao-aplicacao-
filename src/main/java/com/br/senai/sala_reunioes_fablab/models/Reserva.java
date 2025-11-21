@@ -3,6 +3,8 @@ package com.br.senai.sala_reunioes_fablab.models;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,6 +27,7 @@ public class Reserva {
     private  LocalDate data;
 
     @Column ( name = "horario")
+    @JsonFormat(pattern = "HH:mm")
     private  LocalTime horarioString;
 
     @Column ( name = "razao")
