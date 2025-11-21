@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import java.util.List;
-
 import com.br.senai.sala_reunioes_fablab.models.Responsavel;
 import com.br.senai.sala_reunioes_fablab.services.ResponsavelService;
 
@@ -20,6 +19,18 @@ public class ResponsavelController {
         responsavelService.cadastrarResponsavel(responsavel);
         return ResponseEntity.ok().build();
     }
+
+      @GetMapping("/login")
+        public ResponseEntity<?> login(@RequestParam String nome,@RequestParam String senha) {
+
+        Responsavel responsavel = responsavelService.loginUsuario(nome, senha);
+
+        if (responsavel == null) {
+        return ResponseEntity.status(401).body("Nome ou senha incorretos");
+    }
+
+    return ResponseEntity.ok(responsavel);
+}
 
     @GetMapping("/Listar")
     public List<Responsavel> listarResponsaveis() {
