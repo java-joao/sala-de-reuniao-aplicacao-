@@ -20,17 +20,12 @@ public class ResponsavelController {
         return ResponseEntity.ok().build();
     }
 
-      @GetMapping("/login")
-        public ResponseEntity<?> login(@RequestParam String nome,@RequestParam String senha) {
-
-        Responsavel responsavel = responsavelService.loginUsuario(nome, senha);
-
-        if (responsavel == null) {
-        return ResponseEntity.status(401).body("Nome ou senha incorretos");
+    @PostMapping("/login")
+    public String login(@RequestParam String email, @RequestParam String senha) {
+        return responsavelService.login(email,senha);
     }
+  
 
-    return ResponseEntity.ok(responsavel);
-}
 
     @GetMapping("/Listar")
     public List<Responsavel> listarResponsaveis() {

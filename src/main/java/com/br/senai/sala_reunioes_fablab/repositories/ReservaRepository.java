@@ -9,5 +9,4 @@ import com.br.senai.sala_reunioes_fablab.models.Reserva;
 @Repository
 public interface ReservaRepository extends JpaRepository <Reserva, Integer>{
     
-    
 }

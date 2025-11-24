@@ -7,6 +7,7 @@ import java.util.List;
 import com.br.senai.sala_reunioes_fablab.repositories.AdministradorRepository;
 import com.br.senai.sala_reunioes_fablab.models.Administrador;
 
+
 @Service
 public class AdministradorService {
 
@@ -17,10 +18,14 @@ public class AdministradorService {
         administradorRepository.save(administrador);
     }
 
-    public Administrador loginUsuario(String nome, String senha) {
-        return administradorRepository.LoginEmaileSenha(nome, senha);
-            
+   public String login(String nome, String senha){
+    Administrador administrador = administradorRepository.findByNome(nome);
+    if(administrador != null && senha.equals(administrador.getSenha())){
+        return "Login efetuado com sucesso!";
+        }
+        return "Falha ao realizar login";
     }
+
 
     public List<Administrador> consultarAdministradores() {
         return administradorRepository.findAll();
