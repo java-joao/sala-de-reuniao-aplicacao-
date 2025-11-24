@@ -17,8 +17,8 @@ public class ResponsavelService {
     }
 
     
-    public String login(String email, String senha){
-    Responsavel responsavel = responsavelRepository.findByEmail(email);
+    public String login(String nome, String senha){
+    Responsavel responsavel = responsavelRepository.findByNome(nome);
     if(responsavel != null && senha.equals(responsavel.getSenha())){
         return "Login efetuado com sucesso!";
         }

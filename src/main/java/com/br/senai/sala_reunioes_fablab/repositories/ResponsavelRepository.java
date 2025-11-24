@@ -10,7 +10,7 @@ import com.br.senai.sala_reunioes_fablab.models.Responsavel;
 @Repository
 public interface ResponsavelRepository extends JpaRepository<Responsavel, Integer> {
 
-    @Query(value="select * from responsavel where email = :email", nativeQuery=true)
-    public Responsavel findByEmail(String email);
+    @Query(value="select * from responsavel where nome = :nome", nativeQuery=true)
+    public Responsavel findByNome(String nome);
   
 }

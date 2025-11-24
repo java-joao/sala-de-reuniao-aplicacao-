@@ -21,8 +21,8 @@ public class ResponsavelController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam String email, @RequestParam String senha) {
-        return responsavelService.login(email,senha);
+    public String login(@RequestParam String nome, @RequestParam String senha) {
+        return responsavelService.login(nome,senha);
     }
   
 
