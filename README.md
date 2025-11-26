@@ -4,6 +4,8 @@ Este projeto tem como objetivo aprimorar a funcionalidade do agendamento da sala
 
 https://sala-de-reuniao-aplicacao.onrender.com/reunioesfablab/swagger-ui/index.html --> Link Deploy
 
+https://www.canva.com/design/DAG5Uzz53EM/k43b1yZLBtCtR6NFUaHNOg/view?utm_content=DAG5Uzz53EM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hde8c65f0bd --> Link da Documentação
+
 ## 👥 Participantes
 
 - Gabriela Werneck 
